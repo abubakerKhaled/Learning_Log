@@ -5,13 +5,13 @@
 {% block content %}
     <h1>Topics</h1>
 
-    <ul>
+    <ul class="topic-list">
         {% for topic in topics %}
             <li>
                 <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
             </li>
         {% empty %}
-            <p>No topics have been added yet.</p>
+            <li>No topics have been added yet.</li>
         {% endfor %}
     </ul>
 {% endblock content %}

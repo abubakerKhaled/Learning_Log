@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Learning Log{% endblock title %}</title>
-    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'learning_logs/style.css' %}">
+    {% comment %} <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"> {% endcomment %}
 </head>
 <body>
     <header>

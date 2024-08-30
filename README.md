@@ -44,12 +44,8 @@ Learning Log is a dynamic web application designed to empower users in their lea
 
 ## Contributing
 
-We welcome contributions to the Learning Log application! Please read our [CONTRIBUTING.md](link-to-contributing-guide) for details on our code of conduct and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the [MIT License](link-to-license-file).
+We welcome contributions to the Learning Log application! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## Contact
 
-For any queries or support, please contact [your-email@example.com].
+For any queries or support, please contact [aboubkerkhaled77@gmail.com].

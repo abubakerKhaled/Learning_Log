@@ -31,12 +31,6 @@ Learning Log is a dynamic web application designed to empower users in their lea
    - Edit existing entries to update progress or correct information.
    - View entries chronologically or by topic.
 
-## Technical Specifications
-
-- **Frontend**: [Specify technology, e.g., React, Vue.js]
-- **Backend**: [Specify technology, e.g., Django, Node.js]
-- **Database**: [Specify database, e.g., PostgreSQL, MongoDB]
-- **Authentication**: [Specify method, e.g., JWT, OAuth]
 
 ## Getting Started
 

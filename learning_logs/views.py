@@ -61,10 +61,10 @@ def edit_entry(request, entry_id):
     topic = entry.topic
     if request.method != "POST":
         # No data submitted; create a blank form.
-        form = EntryForm()
+        form = EntryForm(instance=entry)
     else:
         # POST data submitted; process data.
-        form = EntryForm(data=request.POST)
+        form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             new_entry = form.save(commit=False)
             new_entry.topic = topic
@@ -73,3 +73,16 @@ def edit_entry(request, entry_id):
 
     context = {"topic": topic, "entry": entry, "form": form}
     return render(request, "learning_logs/edit_entry.html", context)
+
+def delete_entry(request, entry_id):
+    """Delete Entry from the learning log."""
+    entry = get_object_or_404(Entry, pk=entry_id)
+    entry.delete()
+    return HttpResponseRedirect(reverse("learning_logs:topic", args=[entry.topic_id]))
+
+
+def delete_topic(request, topic_id):
+    """Delete Topic from the learning log."""
+    topic = get_object_or_404(Topic, pk=topic_id)
+    topic.delete()
+    return HttpResponseRedirect(reverse("learning_logs:topics"))

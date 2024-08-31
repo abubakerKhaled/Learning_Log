@@ -15,6 +15,7 @@
     {% empty %}
         <p>There are no entries for this topic yet.</p>
     {% endfor %}
-
+    
+    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new Entries</a> <br>
     <a href="{% url 'learning_logs:topics' %}">Topics</a>
 {% endblock content %}

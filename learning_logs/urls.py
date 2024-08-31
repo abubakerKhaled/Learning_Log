@@ -20,7 +20,7 @@ urlpatterns = [
     path('new_topic/', views.new_topic, name='new_topic'),
     
     # Add a new entry to a topic.
-    # path('topics/<int:topic_id>/new_entry/', views.new_entry, name='new_entry'),
+    path('topics/<int:topic_id>/new_entry/', views.new_entry, name='new_entry'),
     
     # Edit an entry.
     # path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),

@@ -11,6 +11,7 @@
         <div class="entry">
             <h3>{{ entry.date_added|date:'M d, Y H:i' }}</h3>
             <p class="entry-text">{{ entry.text|linebreaks }}</p>
+            <a href="{% url 'learning_logs:edit_entry' entry.id %}">Edit</a>
         </div>
     {% empty %}
         <p>There are no entries for this topic yet.</p>

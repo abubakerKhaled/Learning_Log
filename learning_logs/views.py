@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from .models import Topic
+from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
 
 def index(request):
@@ -54,3 +54,22 @@ def new_entry(request, topic_id):
     
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
+
+def edit_entry(request, entry_id):
+    """Edit Entry."""
+    entry = get_object_or_404(Entry, pk=entry_id)
+    topic = entry.topic
+    if request.method != "POST":
+        # No data submitted; create a blank form.
+        form = EntryForm()
+    else:
+        # POST data submitted; process data.
+        form = EntryForm(data=request.POST)
+        if form.is_valid():
+            new_entry = form.save(commit=False)
+            new_entry.topic = topic
+            new_entry.save()
+            return HttpResponseRedirect(reverse("learning_logs:topic", args=[topic.id]))
+
+    context = {"topic": topic, "entry": entry, "form": form}
+    return render(request, "learning_logs/edit_entry.html", context)

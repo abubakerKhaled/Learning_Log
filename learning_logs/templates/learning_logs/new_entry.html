@@ -5,6 +5,7 @@
 {% block content %}
 
 <h1> Add Topic</h1>
+<h2><a href="{% url 'learning_logs:topic' topic.id %}">Topic {{ topic }}</a></h2>
 
 <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}

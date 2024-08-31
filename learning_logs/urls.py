@@ -23,7 +23,7 @@ urlpatterns = [
     path('topics/<int:topic_id>/new_entry/', views.new_entry, name='new_entry'),
     
     # Edit an entry.
-    # path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
+    path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
     
     # Delete an entry.
     # path('delete_entry/<int:entry_id>/', views.delete_entry, name='delete_entry'),

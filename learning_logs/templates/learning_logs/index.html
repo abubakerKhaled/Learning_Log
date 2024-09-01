@@ -3,7 +3,11 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <h1>Welcome to Learning Log</h1>
-    <p>Learning Log helps you keep track of your learning on any topic you're learning about.</p>
-    <p><a href="{% url 'learning_logs:topics' %}">View all topics</a></p>
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Learning Log</h1>
+    <p class="lead">Learning Log helps you keep track of your learning on any topic you're learning about.</p>
+    <hr class="my-4">
+    <p>Start exploring your topics or create a new one.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'learning_logs:topics' %}" role="button">View all topics</a>
+</div>
 {% endblock content %}

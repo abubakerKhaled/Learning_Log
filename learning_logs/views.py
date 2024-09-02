@@ -81,7 +81,6 @@ def new_entry(request, topic_id):
 
 
 @login_required
-@require_http_methods(["GET", "POST"])
 def edit_entry(request, entry_id):
     """Edit Entry."""
     entry = get_object_or_404(Entry, pk=entry_id)
@@ -102,7 +101,6 @@ def edit_entry(request, entry_id):
 
 
 @login_required
-@require_http_methods(["POST"])
 def delete_entry(request, entry_id):
     """Delete Entry from the learning log."""
     entry = get_object_or_404(Entry, pk=entry_id)

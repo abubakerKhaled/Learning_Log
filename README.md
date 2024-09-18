@@ -10,6 +10,7 @@ Learning Log is a dynamic web application designed to empower users in their lea
 - **Journal Entries**: For each topic, users can add, edit, and review detailed journal entries to document their learning process.
 - **User Authentication**: Secure registration and login system to ensure privacy of user data.
 - **Responsive Design**: Accessible on various devices for learning on-the-go.
+- **Enhanced Security**: Uses `admin_honeypot` to add an additional layer of security by creating a honeypot for bots attempting to access the admin interface.
 
 ## User Journey
 
@@ -31,6 +32,9 @@ Learning Log is a dynamic web application designed to empower users in their lea
    - Edit existing entries to update progress or correct information.
    - View entries chronologically or by topic.
 
+## Security Note
+
+To enhance security, the application uses the `admin_honeypot` module. This module provides a honeypot for automated bots that may attempt to access the admin interface. The actual Django admin interface is secured under a different path (`theboss/`).
 
 ## Getting Started
 

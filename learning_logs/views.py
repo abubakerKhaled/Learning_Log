@@ -112,7 +112,6 @@ def delete_entry(request, entry_id):
 
 
 @login_required
-@require_http_methods(["POST"])
 def delete_topic(request, topic_id):
     """Delete Topic from the learning log."""
     topic = get_object_or_404(Topic, pk=topic_id)
